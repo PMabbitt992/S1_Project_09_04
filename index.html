@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Paige Mabitt
+     1.16.19 
+     index.html -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Millenium Computers</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="mc_styles.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="mc_forms.css" rel="stylesheet" type="text/css" media="screen" />
+    <script src="mc_script.js"></script>
+</head>
+
+<body>
+
+    <img src="mc_logo.png">
+    <label for="form1">Web Order Form</label>
+    <form name="cForm" id="form1" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+        <fieldset id="customerInformation">Customer Information</fieldset>
+        <input name="fName" id="firstName" required>
+        <input name="lName" id="lastName" required>
+        <input name="street" id="cStreet">
+        <input name="city" id="cCity">
+        <input name="state" id="cState">
+        <input name="zip" id="cZip">
+        <input name="phone" id="cPhone" required>
+    </form>
+</body>
+
+</html>
