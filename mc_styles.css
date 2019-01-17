@@ -1,3 +1,33 @@
 /* Paige Mabitt 
    1.16.19 
    mc_styles.css */
+
+body {
+    background: rgb(255, 255, 255);
+}
+
+section {
+    width: 80%;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    background: rgba(2, 2, 209, 0.5);
+}
+
+li {
+    display: inline;
+    margin: 105px;
+    color: rgb(255, 255, 0);
+}
+
+footer {
+    background: rgba(2, 2, 209, 0.5);
+    color: rgb(255, 255, 0);
+}
+
+footer p {
+    display: block;
+    margin: 0px 550px;
+}

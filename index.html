@@ -14,19 +14,102 @@
 </head>
 
 <body>
-
     <img src="mc_logo.png">
-    <label for="form1">Web Order Form</label>
-    <form name="cForm" id="form1" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
-        <fieldset id="customerInformation">Customer Information</fieldset>
-        <input name="fName" id="firstName" required>
-        <input name="lName" id="lastName" required>
-        <input name="street" id="cStreet">
-        <input name="city" id="cCity">
-        <input name="state" id="cState">
-        <input name="zip" id="cZip">
-        <input name="phone" id="cPhone" required>
-    </form>
+
+    <nav>
+        <ul>
+            <a href="#">
+                <li>Home</li>
+            </a>
+            <a href="#">
+                <li>Products</li>
+            </a>
+            <a href="#">
+                <li>About</li>
+            </a>
+            <a href="#">
+                <li>Contact Us</li>
+            </a>
+            <a href="#">
+                <li>Order</li>
+            </a>
+        </ul>
+    </nav>
+    <section>
+        <label for="form1">Web Order Form</label>
+        <form name="cForm" id="form1" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
+            <fieldset id="customerInformation">Customer Information</fieldset>
+            <label for="firstName">First Name</label>
+            <input name="fName" id="firstName" required>
+            <label for="lastName">Last Name</label>
+            <input name="lName" id="lastName" required>
+            <label for="cStreet">Street</label>
+            <input name="street" id="cStreet">
+            <label for="cCity">City</label>
+            <input name="city" id="cCity">
+            <label for="cState">State</label>
+            <input name="state" id="cState">
+            <label for="cZip">Zip</label>
+            <input name="zip" id="cZip" pattern="^\d{5}?$" placeholder="nnnnn">
+            <label for="cPhone">Phone</label>
+            <input name="phone" id="cPhone" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(nnn) nnn-nnnn">
+
+            <fieldset id="orderInformation">Order Information</fieldset>
+            <label for="pSpeed">Processor Speed</label>
+            <select id="speedlist">
+                <option value="3.2">3.2 GHz</option>
+                <option value="4.0">4.0 GHz</option>
+                <option value="5.2">5.2 GHz</option>
+            </select>
+            <label for="mem">Memory</label>
+            <select id="memList">
+                <option value="1">1 GB</option>
+                <option value="2">2 GB</option>
+                <option value="4">4 GB</option>
+                <option value="8">8 GB</option>
+            </select>
+            <label for="monSize">Monitor Size</label>
+            <select id="monitorList">
+                <option value="15">15"</option>
+                <option value="17">17"</option>
+                <option value="19">19"</option>
+                <option value="21">21"</option>
+            </select>
+            <label for="drive">Hard Drive</label>
+            <select id="driveList">
+                <option value="240">240 GB</option>
+                <option value="500">500 GB</option>
+                <option value="750">750 GB</option>
+                <option value="1TB">1 TB</option>
+            </select>
+
+            <label for="dBurner">DVD Burner?</label>
+            <label for=”dYes”>Yes</label>
+            <input name=”dBurner” value=”yes” id=”dYes” type="radio">
+            <label for=”dNo”>No</label>
+            <input name=”dBurner” value=”no” id=”dNo” type="radio">
+
+            <label for="tCard">Tuner Card?</label>
+            <label for=”tYes”>Yes</label>
+            <input name=”tCard” value=”yes” id=”tYes” type="radio">
+            <label for=”tNo”>No</label>
+            <input name=”tCard” value=”no” id=”tNo” type="radio">
+
+            <label for="mcReader">Media Card Reader?</label>
+            <label for=”mcYes”>Yes</label>
+            <input name=”mcReader” value=”yes” id=”mcYes” type="radio">
+            <label for=”mcNo”>No</label>
+            <input name=”mcReader” value=”no” id=”mcNo” type="radio">
+
+            <button type="submit">Submit Form</button>
+            <button type="reset">Reset Form</button>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>11341 W. Fiefer Ave, California USA</p>
+    </footer>
 </body>
 
 </html>
