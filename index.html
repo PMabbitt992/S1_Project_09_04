@@ -16,6 +16,7 @@
 <body>
     <img src="mc_logo.png">
 
+    <!-- Navigation bar with links that would possibly be apart of a real website -->
     <nav>
         <ul>
             <a href="#">
@@ -35,79 +36,128 @@
             </a>
         </ul>
     </nav>
+    <!-- register image for design -->
+    <img id="register" src="register.jpg" alt="digital card reader">
+    <!-- the forms -->
     <section>
-        <label for="form1">Web Order Form</label>
+        <!-- form 1 for customer information, leading to http://www.mill_computers.com/orders/process.cgi using POST method and each field has an input with a label  -->
+        <label for="form1" id="title">Web Order Form</label>
         <form name="cForm" id="form1" action="http://www.mill_computers.com/orders/process.cgi" method="POST">
-            <fieldset id="customerInformation">Customer Information</fieldset>
-            <label for="firstName">First Name</label>
-            <input name="fName" id="firstName" required>
-            <label for="lastName">Last Name</label>
-            <input name="lName" id="lastName" required>
-            <label for="cStreet">Street</label>
-            <input name="street" id="cStreet">
-            <label for="cCity">City</label>
-            <input name="city" id="cCity">
-            <label for="cState">State</label>
-            <input name="state" id="cState">
-            <label for="cZip">Zip</label>
-            <input name="zip" id="cZip" pattern="^\d{5}?$" placeholder="nnnnn">
-            <label for="cPhone">Phone</label>
-            <input name="phone" id="cPhone" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder="(nnn) nnn-nnnn">
+            <fieldset id="customerInformation">
+                <legend>Customer Information</legend>
+                <div>
+                    <label for="firstName">First Name</label> <br>
+                    <!-- required category -->
+                    <input name="fName" id="firstName" required>
+                </div>
+                <div>
+                    <label for="lastName">Last Name</label> <br>
+                    <input name="lName" id="lastName" required>
+                </div>
+                <div>
+                    <label for="cStreet">Street</label> <br>
+                    <input name="street" id="cStreet">
+                </div>
+                <div>
+                    <label for="cCity">City</label> <br>
+                    <input name="city" id="cCity">
+                </div>
+                <div>
+                    <label for="cState">State</label> <br>
+                    <input name="state" id="cState">
+                </div>
+                <div>
+                    <label for="cZip">Zip</label> <br>
+                    <!-- pattern for correct formatting and placeholder so the user knows what is expected of them -->
+                    <input name="zip" id="cZip" pattern="^\d{5}?$" placeholder="nnnnn">
+                </div>
+                <div>
+                    <label for="cPhone">Phone</label> <br>
+                    <input name="phone" id="cPhone" required pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+                        placeholder="(nnn) nnn-nnnn">
+                </div>
+            </fieldset>
 
-            <fieldset id="orderInformation">Order Information</fieldset>
-            <label for="pSpeed">Processor Speed</label>
-            <select id="speedlist">
-                <option value="3.2">3.2 GHz</option>
-                <option value="4.0">4.0 GHz</option>
-                <option value="5.2">5.2 GHz</option>
-            </select>
-            <label for="mem">Memory</label>
-            <select id="memList">
-                <option value="1">1 GB</option>
-                <option value="2">2 GB</option>
-                <option value="4">4 GB</option>
-                <option value="8">8 GB</option>
-            </select>
-            <label for="monSize">Monitor Size</label>
-            <select id="monitorList">
-                <option value="15">15"</option>
-                <option value="17">17"</option>
-                <option value="19">19"</option>
-                <option value="21">21"</option>
-            </select>
-            <label for="drive">Hard Drive</label>
-            <select id="driveList">
-                <option value="240">240 GB</option>
-                <option value="500">500 GB</option>
-                <option value="750">750 GB</option>
-                <option value="1TB">1 TB</option>
-            </select>
 
-            <label for="dBurner">DVD Burner?</label>
-            <label for=”dYes”>Yes</label>
-            <input name=”dBurner” value=”yes” id=”dYes” type="radio">
-            <label for=”dNo”>No</label>
-            <input name=”dBurner” value=”no” id=”dNo” type="radio">
 
-            <label for="tCard">Tuner Card?</label>
-            <label for=”tYes”>Yes</label>
-            <input name=”tCard” value=”yes” id=”tYes” type="radio">
-            <label for=”tNo”>No</label>
-            <input name=”tCard” value=”no” id=”tNo” type="radio">
+            <fieldset id="orderInformation">
+                <legend>Order Information</legend>
+                <div>
+                    <label for="pSpeed">Processor Speed</label>
+                    <!-- selection lists for a limited range of options -->
+                    <select id="speedlist">
+                        <option value="3.2">3.2 GHz</option>
+                        <option value="4.0">4.0 GHz</option>
+                        <option value="5.2">5.2 GHz</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="mem">Memory</label>
+                    <select id="memList">
+                        <option value="1">1 GB</option>
+                        <option value="2">2 GB</option>
+                        <option value="4">4 GB</option>
+                        <option value="8">8 GB</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="monitor">Monitor Size</label>
+                    <select id="monitor">
+                        <option value="15">15"</option>
+                        <option value="17">17"</option>
+                        <option value="19">19"</option>
+                        <option value="21">21"</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="hd">Hard Drive</label>
+                    <select id="hd">
+                        <option value="240">240 GB</option>
+                        <option value="500">500 GB</option>
+                        <option value="750">750 GB</option>
+                        <option value="1TB">1 TB</option>
+                    </select>
+                </div>
 
-            <label for="mcReader">Media Card Reader?</label>
-            <label for=”mcYes”>Yes</label>
-            <input name=”mcReader” value=”yes” id=”mcYes” type="radio">
-            <label for=”mcNo”>No</label>
-            <input name=”mcReader” value=”no” id=”mcNo” type="radio">
-
-            <button type="submit">Submit Form</button>
-            <button type="reset">Reset Form</button>
-
+                <div>
+                    <!-- radio buttons for yes or no options -->
+                    <label for="dvd">DVD Burner?</label>
+                    <label for=”dYes”>Yes</label>
+                    <input name=”dvd” value=”yes” id=”dYes” type="radio" required>
+                    <label for=”dNo”>No</label>
+                    <input name=”dvd” value=”no” id=”dNo” type="radio">
+                </div>
+                <div>
+                    <label for="tuner">Tuner Card?</label>
+                    <label for=”tYes”>Yes</label>
+                    <input name=”tuner” value=”yes” id=”tYes” type="radio" required>
+                    <label for=”tNo”>No</label>
+                    <input name=”tuner” value=”no” id=”tNo” type="radio">
+                </div>
+                <div>
+                    <label for="mcard">Media Card Reader?</label>
+                    <label for=”mcYes”>Yes</label>
+                    <input name=”mcard” value=”yes” id=”mcYes” type="radio" required>
+                    <label for=”mcNo”>No</label>
+                    <input name=”mcard” value=”no” id=”mcNo” type="radio">
+                </div>
+                <div>
+                    <!-- checkbox for a warranty -->
+                    <label> 24 month extended warranty?</label>
+                    <input type="checkbox">
+                </div>
+            </fieldset>
+            <!-- Submit, reset, and extra button -->
+            <button type="submit">Send Order</button>
+            <button type="reset">Cancel Order</button>
+            <button type="button">Contact Me</button>
         </form>
     </section>
 
+
+
     <footer>
+        <!-- footer with placeholder adress for design -->
         <p>11341 W. Fiefer Ave, California USA</p>
     </footer>
 </body>

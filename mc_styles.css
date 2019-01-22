@@ -2,32 +2,90 @@
    1.16.19 
    mc_styles.css */
 
-body {
-    background: rgb(255, 255, 255);
+/* gradient background */
+html {
+    background: linear-gradient(to bottom right, rgb(1, 1, 199), rgb(255, 255, 255));
 }
 
+/* light gray background with yellow text, prevention of container collapse */
+body {
+    background: rgba(255, 255, 255, 0.74);
+    color: rgb(255, 255, 0);
+    content: "";
+    display: table;
+    clear: both;
+    margin: auto;
+}
+
+/* spacing and formatting, only 80% width and auto margins */
 section {
     width: 80%;
     margin: auto;
 }
 
+/* no underline */
+a {
+    text-decoration: none;
+}
+
+/* when hovered, a yellow underline appears */
+a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 0);
+}
+
+/* no list discs, light purple background */
 ul {
     list-style-type: none;
     background: rgba(2, 2, 209, 0.5);
 }
 
+/* horizontal nav with 105px spacing and yellow text */
 li {
     display: inline;
     margin: 105px;
     color: rgb(255, 255, 0);
+
 }
 
+/* light purple background, yellow text, 150px space on top */
 footer {
     background: rgba(2, 2, 209, 0.5);
     color: rgb(255, 255, 0);
+    margin-top: 150px;
 }
 
+/* block display and centered text */
 footer p {
     display: block;
-    margin: 0px 550px;
+    text-align: center;
+
+}
+
+/* img on the right, with a specified height and width with a yellow dotted border and a light purple box shadow */
+img#register {
+    float: right;
+    width: 500px;
+    height: 550px;
+    margin: 50px 100px 0px 0px;
+    border: 10px dotted rgb(255, 255, 0);
+    box-shadow: 15px 15px rgba(2, 2, 209, 0.274);
+}
+
+/* for smaller screens */
+@media only screen and (max-width: 1000px) {
+
+    /* no register image */
+    img#register {
+        display: none;
+    }
+
+    fieldset {
+        margin-right: 50px:
+    }
+
+    li {
+        display: block;
+        margin: auto;
+    }
 }
